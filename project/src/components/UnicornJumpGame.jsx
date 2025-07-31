@@ -14,7 +14,7 @@ const UnicornJumpGame = () => {
   
   const animationRef = useRef()
   const groundLevel = 350
-  const gravity = 0.8
+  const gravity = 0.4
   const jumpPower = -15
 
   const startGame = () => {

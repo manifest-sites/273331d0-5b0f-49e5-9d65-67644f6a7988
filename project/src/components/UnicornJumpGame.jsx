@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import { Button, Card } from 'antd'
 
 const UnicornJumpGame = () => {
-  const [unicornY, setUnicornY] = useState(300) // Starting position near ground
+  const [unicornY, setUnicornY] = useState(100) // Starting position higher up
   const [velocityY, setVelocityY] = useState(0)
   const [isOnGround, setIsOnGround] = useState(true)
   const [score, setScore] = useState(0)
@@ -18,9 +18,9 @@ const UnicornJumpGame = () => {
   const jumpPower = -15
 
   const startGame = () => {
-    setUnicornY(groundLevel)
+    setUnicornY(100) // Start much higher up for more gameplay time
     setVelocityY(0)
-    setIsOnGround(true)
+    setIsOnGround(false) // Start in air so player can click to jump
     setScore(0)
     setGameActive(true)
     setGameOver(false)
